@@ -26,6 +26,7 @@ import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.app.ActivityCompat;
 
 import com.msaggik.smarthomecontrolviabluetooth.R;
@@ -55,6 +56,7 @@ public class MainActivity extends AppCompatActivity implements Runnable{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO); // включение светлой темы при тесте
         setContentView(R.layout.activity_main);
 
         // привязка разметки
