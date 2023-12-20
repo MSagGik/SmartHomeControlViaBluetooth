@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.MainActivity">
+
+    <TextView
+        android:id="@+id/header_climate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:gravity="center"
+        android:text="@string/climate"
+        android:textColor="@color/text_turquoise_500"
+        android:textColorHint="@color/text_turquoise_500"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/climate"
+        android:layout_width="350dp"
+        android:layout_height="140dp"
+        android:padding="10dp"
+        android:text="@string/climate_parameter"
+        android:textColor="@color/text_turquoise_700"
+        android:textColorHint="@color/text_turquoise_600"
+        android:background="@drawable/shape_climate"
+        android:textSize="19sp"
+        android:textStyle="italic"
+        android:layout_marginTop="21dp"
+        android:layout_marginStart="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header_climate" />
+
+    <TextView
+        android:id="@+id/header_lighting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/lighting"
+        android:textColor="@color/text_turquoise_500"
+        android:textColorHint="@color/text_turquoise_500"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/climate" />
+
+    <Switch
+        android:id="@+id/lighting_1"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:text="@string/lighting_1"
+        android:textColor="@color/text_turquoise_500"
+        android:textColorHint="@color/text_turquoise_500"
+        android:textSize="17sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header_lighting"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    <Switch
+        android:id="@+id/lighting_2"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="@string/lighting_2"
+        android:textColor="@color/text_turquoise_500"
+        android:textColorHint="@color/text_turquoise_500"
+        android:textSize="17sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lighting_1"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    <Switch
+        android:id="@+id/lighting_3"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="@string/lighting_3"
+        android:textColor="@color/text_turquoise_500"
+        android:textColorHint="@color/text_turquoise_500"
+        android:textSize="17sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lighting_2"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    <Switch
+        android:id="@+id/lighting_4"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="@string/lighting_4"
+        android:textColor="@color/text_turquoise_500"
+        android:textColorHint="@color/text_turquoise_500"
+        android:textSize="17sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lighting_3"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    <Switch
+        android:id="@+id/lighting_5"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="@string/lighting_5"
+        android:textColor="@color/text_turquoise_500"
+        android:textColorHint="@color/text_turquoise_500"
+        android:textSize="17sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lighting_4"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    <Switch
+        android:id="@+id/lighting_6"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="@string/lighting_6"
+        android:textColor="@color/text_turquoise_500"
+        android:textColorHint="@color/text_turquoise_500"
+        android:textSize="17sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lighting_5"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    <Switch
+        android:id="@+id/lighting_7"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="@string/lighting_7"
+        android:textColor="@color/text_turquoise_500"
+        android:textColorHint="@color/text_turquoise_500"
+        android:textSize="17sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lighting_6"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    <Switch
+        android:id="@+id/lighting_8"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="@string/lighting_8"
+        android:textColor="@color/text_turquoise_500"
+        android:textColorHint="@color/text_turquoise_500"
+        android:textSize="17sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lighting_7"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
