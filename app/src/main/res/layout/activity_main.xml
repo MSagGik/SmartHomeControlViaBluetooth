@@ -6,169 +6,205 @@
     android:layout_height="match_parent"
     tools:context=".view.MainActivity">
 
-    <TextView
-        android:id="@+id/header_climate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:gravity="center"
-        android:text="@string/climate"
-        android:textColor="@color/text_turquoise_500"
-        android:textColorHint="@color/text_turquoise_500"
-        android:textSize="23sp"
-        android:textStyle="bold"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lighting_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/navigation_menu"
+        android:layout_marginBottom="70dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:id="@+id/climate"
-        android:layout_width="350dp"
-        android:layout_height="140dp"
-        android:padding="10dp"
-        android:text="@string/climate_parameter"
-        android:textColor="@color/text_turquoise_700"
-        android:textColorHint="@color/text_turquoise_600"
-        android:background="@drawable/shape_climate"
-        android:textSize="19sp"
-        android:textStyle="italic"
-        android:layout_marginTop="21dp"
-        android:layout_marginStart="25dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/header_climate" />
+        <TextView
+            android:id="@+id/header_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:gravity="center"
+            android:text="@string/lighting_header"
+            android:textColor="@color/text_turquoise_500"
+            android:textColorHint="@color/text_turquoise_500"
+            android:textSize="23sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/header_lighting"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:text="@string/lighting"
-        android:textColor="@color/text_turquoise_500"
-        android:textColorHint="@color/text_turquoise_500"
-        android:textSize="23sp"
-        android:textStyle="bold"
+        <ImageView
+            android:id="@+id/set_color"
+            android:layout_width="350dp"
+            android:layout_height="390dp"
+            android:layout_marginTop="21dp"
+            app:srcCompat="@drawable/palette_gradient"
+            android:clipToOutline="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/header_color" />
+
+        <TextView
+            android:id="@+id/info_color"
+            android:layout_width="350dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="25dp"
+            android:gravity="center"
+            android:hint="@string/color"
+            android:textAllCaps="true"
+            android:background="@drawable/shape_climate"
+            android:textColor="@color/text_turquoise_700"
+            android:textColorHint="@color/text_turquoise_600"
+            android:textSize="23sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/set_color" />
+
+        <SeekBar
+            android:id="@+id/set_power_lighting"
+            android:layout_width="370dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="21dp"
+            android:max="255"
+            android:splitTrack="false"
+            android:thumbOffset="16dp"
+            android:thumb="@drawable/thumb_power_seekbar"
+            android:progressDrawable="@drawable/power_seekbar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/info_color" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/climate_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/navigation_menu"
+        android:layout_marginBottom="70dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/climate" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <Switch
-        android:id="@+id/lighting_1"
-        android:layout_width="280dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="21dp"
-        android:text="@string/lighting_1"
-        android:textColor="@color/text_turquoise_500"
-        android:textColorHint="@color/text_turquoise_500"
-        android:textSize="17sp"
-        android:textStyle="italic"
+        <TextView
+            android:id="@+id/header_climate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="19dp"
+            android:gravity="center"
+            android:text="@string/climate"
+            android:textColor="@color/text_turquoise_500"
+            android:textColorHint="@color/text_turquoise_500"
+            android:textSize="23sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ScrollView
+            android:layout_width="350dp"
+            android:layout_height="700dp"
+            android:layout_marginTop="19dp"
+            android:background="@drawable/shape_climate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/header_climate">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/climate"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:minHeight="570dp"
+                    android:padding="10dp"
+                    android:hint="@string/climate_parameter"
+                    android:textColor="@color/text_turquoise_700"
+                    android:textColorHint="@color/text_turquoise_600"
+                    android:textSize="19sp"
+                    android:textStyle="italic" />
+            </LinearLayout>
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/setting_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/navigation_menu"
+        android:layout_marginBottom="70dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/header_lighting"
-        tools:ignore="UseSwitchCompatOrMaterialXml" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <Switch
-        android:id="@+id/lighting_2"
-        android:layout_width="280dp"
+        <TextView
+            android:id="@+id/header_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="19dp"
+            android:gravity="center"
+            android:text="@string/header_setting"
+            android:textColor="@color/text_turquoise_500"
+            android:textColorHint="@color/text_turquoise_500"
+            android:textSize="23sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list_bluetooth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="350dp"
+            android:layout_marginTop="19dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/header_setting" />
+
+        <LinearLayout
+            android:id="@+id/linear_layout_buttons"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/list_bluetooth">
+
+            <Button
+                android:id="@+id/bluetooth_connect"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="@color/grey"
+                android:text="@string/connect_controller_on" />
+
+            <Button
+                android:id="@+id/bluetooth_check"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:backgroundTint="@color/grey"
+                android:text="@string/bluetooth_on" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navigation_menu"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:text="@string/lighting_2"
-        android:textColor="@color/text_turquoise_500"
-        android:textColorHint="@color/text_turquoise_500"
-        android:textSize="17sp"
-        android:textStyle="italic"
+        android:background="?android:attr/windowBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lighting_1"
-        tools:ignore="UseSwitchCompatOrMaterialXml" />
-
-    <Switch
-        android:id="@+id/lighting_3"
-        android:layout_width="280dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:text="@string/lighting_3"
-        android:textColor="@color/text_turquoise_500"
-        android:textColorHint="@color/text_turquoise_500"
-        android:textSize="17sp"
-        android:textStyle="italic"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lighting_2"
-        tools:ignore="UseSwitchCompatOrMaterialXml" />
-
-    <Switch
-        android:id="@+id/lighting_4"
-        android:layout_width="280dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:text="@string/lighting_4"
-        android:textColor="@color/text_turquoise_500"
-        android:textColorHint="@color/text_turquoise_500"
-        android:textSize="17sp"
-        android:textStyle="italic"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lighting_3"
-        tools:ignore="UseSwitchCompatOrMaterialXml" />
-
-    <Switch
-        android:id="@+id/lighting_5"
-        android:layout_width="280dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:text="@string/lighting_5"
-        android:textColor="@color/text_turquoise_500"
-        android:textColorHint="@color/text_turquoise_500"
-        android:textSize="17sp"
-        android:textStyle="italic"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lighting_4"
-        tools:ignore="UseSwitchCompatOrMaterialXml" />
-
-    <Switch
-        android:id="@+id/lighting_6"
-        android:layout_width="280dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:text="@string/lighting_6"
-        android:textColor="@color/text_turquoise_500"
-        android:textColorHint="@color/text_turquoise_500"
-        android:textSize="17sp"
-        android:textStyle="italic"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lighting_5"
-        tools:ignore="UseSwitchCompatOrMaterialXml" />
-
-    <Switch
-        android:id="@+id/lighting_7"
-        android:layout_width="280dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:text="@string/lighting_7"
-        android:textColor="@color/text_turquoise_500"
-        android:textColorHint="@color/text_turquoise_500"
-        android:textSize="17sp"
-        android:textStyle="italic"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lighting_6"
-        tools:ignore="UseSwitchCompatOrMaterialXml" />
-
-    <Switch
-        android:id="@+id/lighting_8"
-        android:layout_width="280dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:text="@string/lighting_8"
-        android:textColor="@color/text_turquoise_500"
-        android:textColorHint="@color/text_turquoise_500"
-        android:textSize="17sp"
-        android:textStyle="italic"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lighting_7"
-        tools:ignore="UseSwitchCompatOrMaterialXml" />
+        app:menu="@menu/navigation_items" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

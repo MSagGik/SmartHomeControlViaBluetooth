@@ -11,14 +11,11 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/logo"
         android:label="@string/app_name_new"
         android:supportsRtl="true"
         android:theme="@style/Theme.SmartHomeControlViaBluetooth"
         tools:targetApi="31">
-        <activity
-            android:name=".view.DeviceSelectionActivity"
-            android:exported="false" />
         <activity
             android:name=".view.MainActivity"
             android:exported="true"
