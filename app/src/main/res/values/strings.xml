@@ -6,15 +6,14 @@
     <string name="menu_bluetooth">Bluetooth</string>
     <string name="menu_list_devices">Список устройств</string>
     <string name="menu_connect">Подключение</string>
-    <string name="lighting_1">Освещение помещения 1</string>
-    <string name="lighting_2">Освещение помещения 2</string>
-    <string name="lighting_3">Освещение помещения 3</string>
-    <string name="lighting_4">Освещение помещения 4</string>
-    <string name="lighting_5">Освещение помещения 5</string>
-    <string name="lighting_6">Освещение помещения 6</string>
-    <string name="lighting_7">Освещение помещения 7</string>
-    <string name="lighting_8">Освещение помещения 8</string>
     <string name="lighting">Умный свет</string>
     <string name="climate_parameter">Данные о температуре, влажности и давлении</string>
     <string name="climate">Климат контроль</string>
+    <string name="connect_controller_on">Подключиться</string>
+    <string name="connect_controller_off">Отключиться</string>
+    <string name="bluetooth_on">Включить bluetooth</string>
+    <string name="bluetooth_off">Выключить bluetooth</string>
+    <string name="lighting_header">Умное освещение</string>
+    <string name="color">Цвет</string>
+    <string name="header_setting">Устройства умного дома</string>
 </resources>

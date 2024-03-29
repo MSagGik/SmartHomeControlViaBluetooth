@@ -13,9 +13,9 @@
         android:id="@+id/name_device"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
         android:textStyle="bold"
         android:textSize="17sp"
+        android:layout_marginStart="25dp"
         android:textColor="@color/text_turquoise_500"
         android:textColorHint="@color/text_turquoise_500"
         android:hint="@string/device_name"
@@ -28,12 +28,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="@string/device_mac"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
         android:textColor="@color/text_turquoise_500"
         android:textColorHint="@color/text_turquoise_500"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/name_device"
+        app:layout_constraintEnd_toStartOf="@+id/check_device"
+        android:layout_marginEnd="25dp"
         app:layout_constraintTop_toTopOf="parent" />
 
     <CheckBox
@@ -42,6 +41,7 @@
         android:layout_height="wrap_content"
         android:checked="false"
         android:clickable="false"
+        android:layout_marginEnd="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
